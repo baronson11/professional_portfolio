@@ -11,7 +11,7 @@ app.use(express.static("public"));
 
 // Force HTTPS redirect ----------------------
 // At the top, with other redirect methods before other routes
-app.get('*', (req, res, next) => {
+app.use((req, res, next) => {
   if (req.headers['x-forwarded-proto'] != 'https') {
     res.redirect('https://britneyaronson.com' + req.url);
   } else {
