@@ -1,6 +1,7 @@
 // Dependencies -------------------------------
 const express = require("express");
 const path = require("path");
+const sslRedirect = require('heroku-ssl-redirect');
 
 // PORT ---------------------------------------
 const PORT = process.env.PORT || 8080;
@@ -10,14 +11,7 @@ const app = express();
 app.use(express.static("public"));
 
 // Force HTTPS redirect ----------------------
-// At the top, with other redirect methods before other routes
-app.use((req, res, next) => {
-  if (req.headers['x-forwarded-proto'] != 'https') {
-    res.redirect('https://britneyaronson.com' + req.url);
-  } else {
-    next(); // Continue to other routes if we're not redirecting
-  }
-});
+app.use(sslRedirect());
 
 // Routes -------------------------------------
 const htmlRoutes = require("./routes/htmlRoutes.js");
