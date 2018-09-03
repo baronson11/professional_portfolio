@@ -7,7 +7,8 @@
 
 // Desktop/Laptops
 @include mediaLg {
-  .projects {
+  .projects,
+  .lang-icons {
     grid-template-columns: repeat(3, 1fr);
   }
 }
@@ -61,7 +62,8 @@
     grid-template-columns: 1fr;
   }
 
-  .projects {
+  .projects,
+  .lang-icons {
     grid-template-columns: repeat(2, 1fr);
   }
 }
@@ -73,6 +75,10 @@
   }
 
   .projects {
+    grid-template-columns: 1fr;
+  }
+
+  .lang-icons {
     grid-template-columns: 1fr;
   }
 }
