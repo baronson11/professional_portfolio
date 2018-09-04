@@ -11,6 +11,13 @@
   .lang-icons {
     grid-template-columns: repeat(3, 1fr);
   }
+
+  .contact_form {
+    input,
+    textarea {
+      width: 80%;
+    }
+  }
 }
 
 // Tablets/Small Laptops
@@ -66,6 +73,13 @@
   .lang-icons {
     grid-template-columns: repeat(2, 1fr);
   }
+
+  .contact_form {
+    input,
+    textarea {
+      width: 80%;
+    }
+  }
 }
 
 // Smartphones
@@ -95,6 +109,13 @@
       margin-bottom: 2rem;
       padding: 0.2rem 1rem;
       background: rgba(lighten($primary-color, 2), 0.5);
+    }
+  }
+
+  .contact_form {
+    input,
+    textarea {
+      width: 90%;
     }
   }
 }

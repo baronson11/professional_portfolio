@@ -153,6 +153,57 @@ main {
 }
 
 // Contact Page ------------------------------------
+
+.contact_form {
+  text-align: center;
+
+  fieldset {
+    border: none;
+  }
+
+  label {
+    display: block;
+    font-size: 1.3rem;
+    margin-bottom: 8px;
+    color: $secondary-color;
+  }
+
+  input,
+  textarea {
+    border-radius: 2px;
+    width: 60%;
+    border: none;
+    background: #e4e4e4;
+    height: 2rem;
+    line-height: 1.5;
+
+    &:focus {
+      outline-color: $secondary-color;
+    }
+  }
+
+  textarea {
+    min-height: 150px;
+  }
+
+  button {
+    background: $primary-color;
+    color: $secondary-color;
+    padding: 10px 20px;
+    font-size: 1.1rem;
+    font-family: 'Catamaran', sans-serif;
+    border: solid 3px #fff;
+    font-weight: bold;
+
+    &:hover {
+      background-color: $secondary-color;
+      color: $primary-color;
+      cursor: pointer;
+      @include easeOut;
+    }
+  }
+}
+
 .boxes {
   display: flex;
   flex-wrap: wrap;
@@ -168,7 +219,7 @@ main {
     @include easeOut;
 
     &:hover {
-      padding: 0.5rem 1.5rem;
+      // padding: 0.5rem 1.5rem;
       background: $secondary-color;
       color: set-text-color($secondary-color);
       cursor: pointer;

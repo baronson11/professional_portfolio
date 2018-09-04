@@ -205,6 +205,42 @@ main {
       border-color: #00ffd7;
       transition: all 0.5s ease-out; }
 
+.contact_form {
+  text-align: center; }
+  .contact_form fieldset {
+    border: none; }
+  .contact_form label {
+    display: block;
+    font-size: 1.3rem;
+    margin-bottom: 8px;
+    color: #00ffd7; }
+  .contact_form input,
+  .contact_form textarea {
+    border-radius: 2px;
+    width: 60%;
+    border: none;
+    background: #e4e4e4;
+    height: 2rem;
+    line-height: 1.5; }
+    .contact_form input:focus,
+    .contact_form textarea:focus {
+      outline-color: #00ffd7; }
+  .contact_form textarea {
+    min-height: 150px; }
+  .contact_form button {
+    background: #2a2a2b;
+    color: #00ffd7;
+    padding: 10px 20px;
+    font-size: 1.1rem;
+    font-family: 'Catamaran', sans-serif;
+    border: solid 3px #fff;
+    font-weight: bold; }
+    .contact_form button:hover {
+      background-color: #00ffd7;
+      color: #2a2a2b;
+      cursor: pointer;
+      transition: all 0.5s ease-out; }
+
 .boxes {
   display: flex;
   flex-wrap: wrap;
@@ -218,7 +254,6 @@ main {
     margin-bottom: 3rem;
     transition: all 0.5s ease-out; }
     .boxes div:hover {
-      padding: 0.5rem 1.5rem;
       background: #00ffd7;
       color: #2a2a2b;
       cursor: pointer; }
@@ -257,7 +292,10 @@ main {
 @media screen and (min-width: 769px) and (max-width: 1170px) {
   .projects,
   .lang-icons {
-    grid-template-columns: repeat(3, 1fr); } }
+    grid-template-columns: repeat(3, 1fr); }
+  .contact_form input,
+  .contact_form textarea {
+    width: 80%; } }
 
 @media screen and (max-width: 768px) {
   main {
@@ -290,7 +328,10 @@ main {
     grid-template-columns: 1fr; }
   .projects,
   .lang-icons {
-    grid-template-columns: repeat(2, 1fr); } }
+    grid-template-columns: repeat(2, 1fr); }
+  .contact_form input,
+  .contact_form textarea {
+    width: 80%; } }
 
 @media screen and (max-width: 500px) {
   main#home h1 {
@@ -307,4 +348,7 @@ main {
     h1.sm-heading, h2.sm-heading, h3.sm-heading {
       margin-bottom: 2rem;
       padding: 0.2rem 1rem;
-      background: rgba(47, 47, 48, 0.5); } }
+      background: rgba(47, 47, 48, 0.5); }
+  .contact_form input,
+  .contact_form textarea {
+    width: 90%; } }
