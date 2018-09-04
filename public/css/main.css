@@ -9,7 +9,7 @@
     width: 28px;
     height: 3px;
     margin: 0 0 5px 0;
-    background: #000;
+    background: #0b0b0b;
     transition: all 0.5s ease-out; }
   .menu-btn.close {
     transform: rotate(180deg); }
@@ -72,7 +72,7 @@
     text-transform: uppercase;
     padding: 1rem 0;
     font-weight: 300;
-    color: #000;
+    color: #0b0b0b;
     text-decoration: none;
     transition: all 0.5s ease-out; }
     .menu .nav-link:hover {
@@ -95,10 +95,10 @@
 
 body {
   background: #c4c4c4;
-  color: #000;
+  color: #0b0b0b;
   height: 100%;
   margin: 0;
-  font-family: 'Lato',sans-serif;
+  font-family: 'Catamaran', sans-serif;
   line-height: 1.5; }
   body#bg-img {
     background: url(../assets/galaxy.png);
@@ -218,10 +218,10 @@ main {
     .boxes div:hover {
       padding: 0.5rem 1.5rem;
       background: #865494;
-      color: #000;
+      color: #0b0b0b;
       cursor: pointer; }
       .boxes div:hover span {
-        color: #000; }
+        color: #0b0b0b; }
 
 .btn, .btn-dark, .btn-light {
   display: block;
@@ -231,7 +231,7 @@ main {
   border-radius: 5px; }
   .btn:hover, .btn-dark:hover, .btn-light:hover {
     background: #865494;
-    color: #000; }
+    color: #0b0b0b; }
 
 .btn-dark {
   background: #454545;
@@ -245,7 +245,7 @@ main {
   text-align: center;
   padding: 1rem;
   background: #ababab;
-  color: #000;
+  color: #0b0b0b;
   height: 60px; }
 
 @media screen and (min-width: 1171px) {
