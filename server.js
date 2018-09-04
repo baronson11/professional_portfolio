@@ -11,6 +11,15 @@ const app = express();
 app.use(express.static("public"));
 
 // Force SSL/HTTPS redirect ----------------------
+// Redirect for "/" route only
+app.get("/", (req, res, next) => {
+  if (req.headers['X-Forwarded-Proto'] != 'HTTPS') {
+    res.redirect(`https://${req.headers.host}${req.url}`);
+  } else {
+    next();
+  }
+});
+
 app.use(sslRedirect(['production'], 301));
 
 // Routes -------------------------------------
