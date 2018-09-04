@@ -331,7 +331,7 @@ main {
     grid-template-columns: repeat(2, 1fr); }
   .contact_form input,
   .contact_form textarea {
-    width: 80%; } }
+    width: 85%; } }
 
 @media screen and (max-width: 500px) {
   main#home h1 {
@@ -351,4 +351,4 @@ main {
       background: rgba(47, 47, 48, 0.5); }
   .contact_form input,
   .contact_form textarea {
-    width: 90%; } }
+    width: 100%; } }
