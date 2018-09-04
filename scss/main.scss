@@ -106,11 +106,13 @@ main {
 
   h3 {
     font-size: 1.5rem;
+    color: $primary-color;
   }
 }
 
 .job {
-  background: lighten($primary-color, 5);
+  background: #e4e4e4;
+  color: set-text-color(#e4e4e4);
   padding: 0.5rem;
   border-bottom: $secondary-color 5px solid;
 }
