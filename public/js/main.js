@@ -4,11 +4,12 @@ const menu = document.querySelector('.menu');
 const menuNav = document.querySelector('.menu-nav');
 const menuBranding = document.querySelector('.menu-branding');
 const navItems = document.querySelectorAll('.nav-item');
+const form = document.querySelector('form');
 
 // Set initial state of menu
 let showMenu = false;
 
-// Funcs
+// toggleMenu --------------------------------------------
 function toggleMenu() {
   if (!showMenu) {
     menuBtn.classList.add('close');
@@ -33,5 +34,16 @@ function toggleMenu() {
 
 }
 
-// Listeners
+// Message sent alert ------------------------------------
+// function formAlert(e) {
+//   e.preventDefault();
+//   document.querySelector('.alert').style.display = 'block';
+//   setTimeout(function(){
+//     document.querySelector('.alert').style.display = 'none';
+//   }, 4000);
+//   form.reset();
+// }
+
+// Listeners --------------------------------------------
 menuBtn.addEventListener("click", toggleMenu);
+// form.addEventListener("submit", formAlert(e));
