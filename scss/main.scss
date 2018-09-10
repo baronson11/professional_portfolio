@@ -176,6 +176,7 @@ main {
     background: #e4e4e4;
     height: 2rem;
     line-height: 1.5;
+    font-family: 'Catamaran';
 
     &:focus {
       outline-color: $secondary-color;
@@ -190,7 +191,7 @@ main {
     background: $primary-color;
     color: $secondary-color;
     padding: 10px 20px;
-    font-size: 1.1rem;
+    font-size: 1.5rem;
     font-family: 'Catamaran', sans-serif;
     border: solid 3px #fff;
     font-weight: bold;

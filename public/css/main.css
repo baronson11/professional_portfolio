@@ -221,7 +221,8 @@ main {
     border: none;
     background: #e4e4e4;
     height: 2rem;
-    line-height: 1.5; }
+    line-height: 1.5;
+    font-family: 'Catamaran'; }
     .contact_form input:focus,
     .contact_form textarea:focus {
       outline-color: #00ffd7; }
@@ -231,7 +232,7 @@ main {
     background: #2a2a2b;
     color: #00ffd7;
     padding: 10px 20px;
-    font-size: 1.1rem;
+    font-size: 1.5rem;
     font-family: 'Catamaran', sans-serif;
     border: solid 3px #fff;
     font-weight: bold; }
