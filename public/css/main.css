@@ -400,6 +400,8 @@ main {
       height: 150px;
       padding: 0.5rem .9rem;
       font-size: 5rem; }
+  .bio-image {
+    width: 80%; }
   .about-info {
     grid-template-areas: "bioimage" "bio" "job1" "job2";
     grid-template-columns: 1fr; }
