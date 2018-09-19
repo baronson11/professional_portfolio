@@ -34,16 +34,6 @@ function toggleMenu() {
 
 }
 
-// Message sent alert ------------------------------------
-// function formAlert(e) {
-//   e.preventDefault();
-//   document.querySelector('.alert').style.display = 'block';
-//   setTimeout(function(){
-//     document.querySelector('.alert').style.display = 'none';
-//   }, 4000);
-//   form.reset();
-// }
 
 // Listeners --------------------------------------------
 menuBtn.addEventListener("click", toggleMenu);
-// form.addEventListener("submit", formAlert(e));

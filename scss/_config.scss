@@ -2,13 +2,56 @@
 $primary-color: #2a2a2b;
 $secondary-color: #00ffd7;
 $show-home-image: true;
+$show-secondary-image: true;
 $home-image: url(../assets/background.gif);
+$secondary-image: url(../assets/schema-bg.jpg);
 $background-opacity: 0.6;
 
 // ease out --------------------------
 @mixin easeOut {
   transition: all 0.5s ease-out;
 }
+
+// keyframes ------------------------------------
+.lg-heading,
+.sm-heading,
+main {
+  -webkit-animation: fadein 0.5s; /* Safari, Chrome and Opera > 12.1 */
+  -moz-animation: fadein 0.5s; /* Firefox < 16 */
+  -ms-animation: fadein 0.5s; /* Internet Explorer */
+  -o-animation: fadein 0.5s; /* Opera < 12.1 */
+  animation: fadein 0.5s;
+}
+
+@keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+/* Firefox < 16 */
+@-moz-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+/* Safari, Chrome and Opera > 12.1 */
+@-webkit-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+/* Internet Explorer */
+@-ms-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+/* Opera < 12.1 */
+@-o-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
 
 // Background --------------------------
 @mixin background {
@@ -28,6 +71,26 @@ $background-opacity: 0.6;
         height: 100%;
         z-index: -1;
         background: rgba($primary-color, $background-opacity);
+      }
+    }
+  }
+
+  @if $show-secondary-image {
+    &#bg-schema {
+      background: $secondary-image;
+      background-attachment: fixed;
+      background-size: cover;
+      background-position: center;
+
+      &:after {
+        content: '';
+        position: fixed;
+        top: 0;
+        right: 0;
+        width: 100%;
+        height: 100vh;
+        z-index: -1;
+        background: rgba($primary-color, 0.95);
       }
     }
   }

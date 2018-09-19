@@ -1,3 +1,50 @@
+.lg-heading,
+.sm-heading,
+main {
+  -webkit-animation: fadein 0.5s;
+  /* Safari, Chrome and Opera > 12.1 */
+  -moz-animation: fadein 0.5s;
+  /* Firefox < 16 */
+  -ms-animation: fadein 0.5s;
+  /* Internet Explorer */
+  -o-animation: fadein 0.5s;
+  /* Opera < 12.1 */
+  animation: fadein 0.5s; }
+
+@keyframes fadein {
+  from {
+    opacity: 0; }
+  to {
+    opacity: 1; } }
+
+/* Firefox < 16 */
+@-moz-keyframes fadein {
+  from {
+    opacity: 0; }
+  to {
+    opacity: 1; } }
+
+/* Safari, Chrome and Opera > 12.1 */
+@-webkit-keyframes fadein {
+  from {
+    opacity: 0; }
+  to {
+    opacity: 1; } }
+
+/* Internet Explorer */
+@-ms-keyframes fadein {
+  from {
+    opacity: 0; }
+  to {
+    opacity: 1; } }
+
+/* Opera < 12.1 */
+@-o-keyframes fadein {
+  from {
+    opacity: 0; }
+  to {
+    opacity: 1; } }
+
 .menu-btn {
   position: absolute;
   z-index: 3;
@@ -47,17 +94,21 @@
     .menu-nav.show {
       transform: translate3d(0, 0, 0); }
   .menu-branding {
-    background: #2a2a2b;
+    background: #00ffd7;
     transform: translate3d(0, 100%, 0);
     transition: all 0.5s ease-out; }
     .menu-branding.show {
       transform: translate3d(0, 0, 0); }
-    .menu-branding .portrait {
+    .menu-branding .circle {
       width: 250px;
       height: 250px;
-      background: url("../assets/portrait.jpg");
+      padding: 0.8rem 1.2rem;
+      background: #00ffd7;
       border-radius: 50%;
-      border: solid 3px #00ffd7; }
+      border: solid 4px #2a2a2b;
+      font-family: 'Fredericka the Great', 'Catamaran', sans-serif;
+      font-size: 9rem;
+      color: #2a2a2b; }
   .menu .nav-item {
     transform: translate3d(600px, 0, 0);
     transition: all 0.5s ease-out; }
@@ -114,15 +165,30 @@ body {
       height: 100%;
       z-index: -1;
       background: rgba(42, 42, 43, 0.6); }
+  body#bg-schema {
+    background: url(../assets/schema-bg.jpg);
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center; }
+    body#bg-schema:after {
+      content: '';
+      position: fixed;
+      top: 0;
+      right: 0;
+      width: 100%;
+      height: 100vh;
+      z-index: -1;
+      background: rgba(42, 42, 43, 0.95); }
 
 h1, h2, h3 {
   margin: 0;
   font-weight: 400; }
   h1.lg-heading, h2.lg-heading, h3.lg-heading {
-    font-size: 6rem; }
+    font-size: 6rem;
+    font-family: 'Fredericka the Great'; }
   h1.sm-heading, h2.sm-heading, h3.sm-heading {
     margin-bottom: 2rem;
-    padding: 0.2rem 1rem; }
+    padding: 0.2rem; }
 
 a {
   color: #fff;
@@ -131,7 +197,8 @@ a {
 header {
   position: fixed;
   z-index: 2;
-  width: 100%; }
+  width: 100%;
+  font-family: 'Fredericka the Great', sans-serif; }
 
 .text-secondary {
   color: #00ffd7; }
@@ -160,8 +227,10 @@ main {
 .bio-image {
   grid-area: bioimage;
   margin: auto;
-  border-radius: 50%;
   border: solid 3px #00ffd7; }
+  .bio-image:hover {
+    transform: rotate(-3deg);
+    transition: transform 0.4s ease; }
 
 .bio {
   grid-area: bio;
@@ -204,6 +273,11 @@ main {
       opacity: 0.5;
       border-color: #00ffd7;
       transition: all 0.5s ease-out; }
+  .projects .item {
+    display: flex;
+    flex-direction: column; }
+    .projects .item p {
+      flex-grow: 1; }
 
 .contact_form {
   text-align: center; }
@@ -222,7 +296,8 @@ main {
     background: #e4e4e4;
     height: 2rem;
     line-height: 1.5;
-    font-family: 'Catamaran'; }
+    font-family: 'Catamaran';
+    font-size: 1.2em; }
     .contact_form input:focus,
     .contact_form textarea:focus {
       outline-color: #00ffd7; }
@@ -247,7 +322,7 @@ main {
   flex-wrap: wrap;
   justify-content: space-evenly;
   align-items: center;
-  margin-top: 1rem; }
+  margin-top: 3rem; }
   .boxes div {
     font-size: 2rem;
     border: 3px #fff solid;
@@ -320,10 +395,11 @@ main {
   .menu-branding {
     height: 25vh;
     transform: translate3d(100%, 0, 0); }
-    .menu-branding .portrait {
-      background: url("../assets/portrait_small.jpg");
+    .menu-branding .circle {
       width: 150px;
-      height: 150px; }
+      height: 150px;
+      padding: 0.5rem .9rem;
+      font-size: 5rem; }
   .about-info {
     grid-template-areas: "bioimage" "bio" "job1" "job2";
     grid-template-columns: 1fr; }
@@ -348,8 +424,7 @@ main {
       font-size: 4rem; }
     h1.sm-heading, h2.sm-heading, h3.sm-heading {
       margin-bottom: 2rem;
-      padding: 0.2rem 1rem;
-      background: rgba(47, 47, 48, 0.5); }
+      padding: 0.2rem 1rem; }
   .contact_form input,
   .contact_form textarea {
     width: 100%; } }
